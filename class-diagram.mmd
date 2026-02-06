@@ -1,0 +1,39 @@
+```mermaid
+classDiagram
+  class AppUser {
+    +Guid Id
+    +string Email
+    +string Username
+    +string PasswordHash
+    +string PasswordSalt
+    +int Credits
+    +DateTime RegisteredAtUtc
+    +DateTime? LastAutoGrantAtUtc
+    +byte[] RowVersion
+  }
+
+  class TaskItem {
+    +Guid Id
+    +Guid UserId
+    +string Name
+    +TaskStatus Status
+    +int? ChargedCost
+    +int? ExecutionSeconds
+    +DateTime CreatedAtUtc
+    +DateTime? StartedAtUtc
+    +DateTime? CompletedAtUtc
+    +byte[] RowVersion
+  }
+
+  class TaskStatus {
+    <<enumeration>>
+    Pending
+    Running
+    Succeeded
+    Failed
+    RejectedInsufficientCredits
+  }
+
+  AppUser "1" --> "many" TaskItem : owns
+  TaskItem --> TaskStatus
+```
