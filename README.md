@@ -102,10 +102,6 @@ We store `LastAutoGrantAtUtc` in the user row. This makes it safe across restart
 - Auto-grants are applied on-demand (on API calls) rather than via a scheduler (simpler, restart-safe).
 - Random success/failure rate is chosen (75% success) since no probability was specified.
 
-## Class Diagram
-
-See below:
-
 ## Class Diagram (PNG)
 
 <p align="center">
