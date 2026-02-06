@@ -23,7 +23,6 @@ Thumbs.db
 
 # Local databases / data folders
 **/data/
-**/Data/
 **/*.db
 **/*.sqlite
 **/*.sqlite3
