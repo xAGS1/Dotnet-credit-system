@@ -104,7 +104,14 @@ We store `LastAutoGrantAtUtc` in the user row. This makes it safe across restart
 
 ## Class Diagram
 
-See: `class-diagram.mmd` (Mermaid) or below.
+See below:
+
+## Class Diagram (PNG)
+
+<p align="center">
+  <img src="docs/class-diagram.png" alt="Class diagram" width="850"/>
+</p>
+
 
 ```mermaid
 classDiagram
